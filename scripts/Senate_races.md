@@ -1,0 +1,230 @@
+1- Senate  
+  - Alabama  
+    - Republican  
+      - Barry Moore  
+        - Website: [https://barrymooreforalabama.com/](https://barrymooreforalabama.com/)  
+    - Democrat  
+      - Everett Wess  
+        - Website: [https://wessforsenate.com/](https://wessforsenate.com/)  
+  - Alaska  
+    - Republican  
+      - Dan Sullivan  
+    - Democrat  
+      - Mary Peltola  
+        - Website: [https://marypeltola.com/](https://marypeltola.com/)  
+  - Arkansas  
+    - Republican  
+      - Tom Cotton  
+    - Democrat  
+      - Hallie Shoffner  
+        - Website: [https://www.hallieshoffner.com/](https://www.hallieshoffner.com/)  
+  - Colorado  
+    - Republican  
+      - Mark Baisley  
+        - Website: [https://baisleyforsenate.com/](https://baisleyforsenate.com/)  
+    - Democrat  
+      - John Hickenlooper  
+  - Delaware  
+    - Republican  
+      - Michael Katz
+        - Website: [https://drmikekatz.com/](https://drmikekatz.com/)
+    - Democrat  
+      - Chris Coons  
+  - Florida  
+    - Republican  
+      - Ashley Moody  
+    - Democrat  
+      - Angie Nixon  
+        - Website: [https://angienixon.com/](https://angienixon.com/)  
+  - Georgia  
+    - Republican  
+      - Mike Collins  
+        - Website: [https://mikecollinsga.com/](https://mikecollinsga.com/)  
+    - Democrat  
+      - Jon Ossoff  
+  - Idaho  
+    - Republican  
+      - Jim Risch  
+    - Independent  
+      - Todd Achilles  
+        - Website: [https://www.achillesforidaho.com/](https://www.achillesforidaho.com/)  
+  - Illinois  
+    - Republican  
+      - Don Tracy  
+        - Website: [https://dontracyforil.com/](https://dontracyforil.com/)  
+    - Democrat  
+      - Juliana Stratton  
+        - Website: [https://www.julianastratton.com/](https://www.julianastratton.com/)  
+  - Iowa  
+    - Republican  
+      - Ashley Hinson  
+    - Democrat  
+      - Josh Turek  
+        - Website: [https://turek4iowa.com/](https://turek4iowa.com/)  
+  - Kansas  
+    - Republican  
+      - Roger Marshall  
+    - Democrat  
+      - Adam Hamilton  
+        - Website: [https://hamiltonforkansas.com/](https://hamiltonforkansas.com/)  
+  - Kentucky  
+    - Republican  
+      - Andy Barr  
+        - Website: [https://barrforsenate.com/](https://barrforsenate.com/)  
+    - Democrat  
+      - Charles Booker  
+        - Website: [https://charlesbooker.org/](https://charlesbooker.org/)  
+  - Louisiana  
+    - Republican  
+      - Julia Letlow  
+        - Website: [https://www.julialetlow.com/](https://www.julialetlow.com/)  
+    - Democrat  
+      - Jamie Davis  
+        - Website: [https://jamieforlouisiana.com/](https://jamieforlouisiana.com/)  
+  - Maine  
+    - Republican  
+      - Susan Collins  
+    - Democrat  
+      - Troy Jackson  
+        - Website: [https://jacksonformaine.com/](https://jacksonformaine.com/)  
+  - Massachusetts  
+    - Republican  
+      - John Deaton
+        - [https://www.johndeatonforsenate.com/meet-john](https://www.johndeatonforsenate.com/meet-john)  
+    - Democrat  
+      - Edward J. Markey  
+  - Michigan  
+    - Republican  
+      - Mike Rogers  
+        - Website: [https://rogersforsenate.com/](https://rogersforsenate.com/)  
+    - Democrat  
+      - Abdul El-Sayed  
+        - Website: [https://abdulforsenate.com/](https://abdulforsenate.com/)  
+  - Minnesota  
+    - Republican  
+      - Michele Tafoya  
+        - Website: [https://micheletafoya.com/](https://micheletafoya.com/)  
+    - Democrat  
+      - Peggy Flanagan  
+        - Website: [https://peggyflanagan.com/](https://peggyflanagan.com/)  
+  - Mississippi  
+    - Republican  
+      - Cindy Hyde-Smith  
+    - Democrat  
+      - Scott Colom  
+        - Website: [https://scottcolom.com/](https://scottcolom.com/)  
+  - Montana  
+    - Republican  
+      - Kurt Alme  
+        - Website: [https://almeforsenate.com/](https://almeforsenate.com/)  
+    - Democrat  
+      - Alani Bankhead  
+        - Website: [https://alaniformt.com/](https://alaniformt.com/)  
+    - Independent  
+      - Seth Bodnar  
+        - Website: [https://www.sethformontana.com/](https://www.sethformontana.com/)  
+  - Nebraska  
+    - Republican  
+      - Pete Ricketts  
+    - Independent  
+      - Dan Osborn  
+        - Website: [https://www.osbornforsenate.com/](https://www.osbornforsenate.com/)  
+  - New Hampshire  
+    - Republican  
+      - John Sununu  
+        - Website: [https://www.sununusenator.com/](https://www.sununusenator.com/)  
+    - Democrat  
+      - Chris Pappas  
+        - Website: [https://chrispappas.org/](https://chrispappas.org/)  
+    - Constitution  
+      - Edmond Laplante  
+        - Website: [https://laplante4constitutionalnh.com/](https://laplante4constitutionalnh.com/)  
+  - New Jersey  
+    - Republican  
+      - Justin Murphy 
+        - [https://jerseyjustin4senate.org/](https://jerseyjustin4senate.org/)
+    - Democrat  
+      - Cory Booker  
+  - New Mexico  
+    - Republican  
+      - Larry E. Marker  
+        - Website: [https://larrymarker.com/](https://larrymarker.com/)  
+    - Democrat  
+      - Ben Ray Luján  
+        - Website: [https://benraylujan.com/](https://benraylujan.com/)  
+  - North Carolina  
+    - Republican  
+      - Michael Whatley  
+        - Website: [https://michaelwhatley.com/](https://michaelwhatley.com/)  
+    - Democrat  
+      - Roy Cooper  
+        - Website: [https://roycooper.com/](https://roycooper.com/)  
+  - Ohio  
+    - Republican   
+      - Jon Husted  
+    - Democrat  
+      - Sherrod Brown
+        -Website: [https://www.sherrodbrown.com/] (https://www.sherrodbrown.com/)
+  - Oklahoma  
+    - Republican  
+      - Kevin Hern  
+        - Website: [https://hernforsenate.com/](https://hernforsenate.com/)  
+    - Democrat  
+      - N'Kiyla Thomas  
+        - Website: [https://www.jasmineforok.com/](https://www.jasmineforok.com/)  
+  - Oregon  
+    - Republican  
+      - David Brock Smith  
+        - Website: [https://www.davidbrocksmithfororegon.com/](https://www.davidbrocksmithfororegon.com/)  
+    - Democrat  
+      - Jeff Merkley  
+  - Rhode Island  
+    - Republican  
+      - Raymond McKay  
+        - Website: [https://www.mckayforussenate.com/](https://www.mckayforussenate.com/)  
+    - Democrat  
+      - Jack Reed  
+  - South Carolina  
+    - Republican  
+      - Darline Graham  
+    - Democrat  
+      - Annie Andrews  
+        - Website: [https://drannieandrews.com/](https://drannieandrews.com/)  
+  - South Dakota  
+    - Republican  
+      - Mike Rounds  
+    - Independent  
+      - Brian Bengs  
+        - Website: [https://bengsforsouthdakota.com/](https://bengsforsouthdakota.com/)  
+  - Tennessee  
+    - Republican  
+      - Bill Hagerty  
+    - Democrat  
+      - Marquita Bradshaw  
+        - Website: [https://www.marquitabradshaw.com/](https://www.marquitabradshaw.com/)  
+  - Texas  
+    - Republican  
+      - Ken Paxton  
+        - Website: [https://www.kenpaxton.com/](https://www.kenpaxton.com/)  
+    - Democrat  
+      - James Talarico  
+        - Website: [https://jamestalarico.com/](https://jamestalarico.com/)  
+  - Virginia  
+    - Republican  
+      - Bert Mizusawa  
+        - Website: [https://bertforsenate.com/](https://bertforsenate.com/)  
+    - Democrat  
+      - Mark Warner  
+  - West Virginia  
+    - Republican  
+      - Shelley Moore Capito  
+    - Democrat  
+      - Rachel Fetty Anderson  
+        - Website: [https://www.fettyandersonforsenate.com/](https://www.fettyandersonforsenate.com/)  
+  - Wyoming  
+    - Republican  
+      - Harriet Hageman  
+        - Website: [https://hagemanforwyoming.com/](https://hagemanforwyoming.com/)  
+    - Democrat  
+      - James Byrd  
+        - Website: [https://byrdforsenate.com/](https://byrdforsenate.com/)
