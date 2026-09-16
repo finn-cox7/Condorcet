@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Chamber {
+  HOUSE
+  SENATE
+}
+
+enum VotePosition {
+  YEA
+  NAY
+  PRESENT
+  NOT_VOTING
+}
+
+model Member {
+  id         String     @id @default(cuid())
+  bioguideId String     @unique
+  firstName  String
+  lastName   String
+  party      String
+  chamber    Chamber
+  state      String
+  district   Int?
+  votes      Vote[]
+  candidate  Candidate?
+}
+
+model Bill {
+  id         String  @id @default(cuid())
+  congress   Int
+  billType   String
+  billNumber Int
+  title      String
+  policyArea String?
+  summary    String?
+  plainSummary String? // ~30-word plain-language rewrite of summary, written offline
+  votes      Vote[]
+
+  @@unique([congress, billType, billNumber])
+}
+
+model Vote {
+  id       String       @id @default(cuid())
+  member   Member       @relation(fields: [memberId], references: [id])
+  memberId String
+  bill     Bill         @relation(fields: [billId], references: [id])
+  billId   String
+  chamber  Chamber
+  position VotePosition
+  rollCall Int
+  date     DateTime
+
+  @@unique([memberId, billId])
+}
+
+model Race {
+  id           String          @id @default(cuid())
+  name         String
+  electionYear Int
+  chamber      Chamber
+  state        String
+  district     Int?
+  candidates   RaceCandidate[]
+
+  @@unique([state, district, electionYear, chamber])
+}
+
+model Candidate {
+  id             String          @id @default(cuid())
+  firstName      String
+  lastName       String
+  party          String
+  state          String
+  fecCandidateId String          @unique
+  // Set only when there's no Member row to link to — i.e. no federal
+  // voting record. Required in that case at the application layer;
+  // Prisma can't express a conditional-required column.
+  websiteUrl     String?
+  member         Member?         @relation(fields: [memberId], references: [id])
+  memberId       String?         @unique
+  // True for candidates who served in Congress at any point. When there is no
+  // linked Member (service predates the loaded 118th/119th data, e.g. Mike
+  // Rogers), the UI shows "no votes in the current Congress." instead of
+  // "no federal voting record".
+  formerMemberOfCongress Boolean @default(false)
+  races          RaceCandidate[]
+}
+
+model RaceCandidate {
+  race        Race      @relation(fields: [raceId], references: [id])
+  raceId      String
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  candidateId String
+  party       String // "D" | "R" | "I", etc. — this race's ballot party
+
+  @@id([raceId, candidateId])
+}
