@@ -111,21 +111,23 @@ Freshly scaffolded Next.js App Router project — no custom application code bey
 - `Bill.title` is Congress.gov's display title, which can still show the original name of a shell bill (e.g. S. 1383 is titled as a veterans bill but passed as the SAVE America Act). `plainSummary` describes the voted-on version.
 - 118th Congress S. 2073 ("Kids Online Safety and Privacy Act") has no `plainSummary` on purpose: its only CRS summary describes a different bill.
 
-## What's next
+## Current status
 
-Ingestion and the web app are both done.
+Ingestion, the web app, and deployment are all done. Live at <https://condorcet.fyi>.
 
 - **Ingestion:** 118th and 119th Congresses, both chambers — 35 races, 73 candidates, 1,024 bills, 952 plain-language summaries, and every candidate column resolving to one of the four display states above (no empty columns).
 - **Web app:** six routes — `/`, `/race/[slug]` (issue picker and comparison share the route, switched by `?issues=`), `/how-it-works`, `/terms`, `/privacy`.
+- **Deployment:** Vercel, building from `main`. Postgres is Neon, on the pooled host (`-pooler`), which is what serverless needs.
 
-Next is deployment to Vercel. Milestone: Oct 1, 2026.
+### Still outstanding
 
-### Required before the first deploy
+1. **Fill in `CONTACT` in `lib/legal.ts`.** It still holds `[add a contact email]`, and that literal string is rendering in section 8 of `/terms` and `/privacy` on the live site.
+2. **An empty second database exists.** A Prisma Postgres database at `db.prisma.io` had all five migrations applied on 17 Sep 2026 but holds no rows — schema only. Nothing points at it. Delete it, or keep it deliberately as staging; either way don't let `DATABASE_URL` drift onto it, since the app would build fine and then serve a site with no races.
 
-1. **Add `"postinstall": "prisma generate"` to `package.json`.** `app/generated/prisma` is gitignored, so a fresh clone has no Prisma client and `next build` fails on the missing import. This is the one step that breaks the build outright.
-2. **Set `DATABASE_URL` in Vercel's project settings, for every environment including Preview.** It is the only variable the web app reads. `CONGRESS_API_KEY` and `FEC_API_KEY` are used by `scripts/` alone and should not be added to Vercel.
-3. **`DATABASE_URL` must be present at build time, not only at runtime.** `/` and `/how-it-works` are prerendered static and query Postgres during `next build`, so a build without it fails before a single request is served.
-4. **Fill in `CONTACT` in `lib/legal.ts`.** It currently renders the literal `[add a contact email]` on `/terms` and `/privacy`.
+### How the deployment is wired
+
+- **`"postinstall": "prisma generate"` in `package.json`.** `app/generated/prisma` is gitignored, so without this a fresh clone has no Prisma client and `next build` fails on the missing import. npm runs it after `npm install`, before the build.
+- **`DATABASE_URL` is set in Vercel for every environment, including Preview, and is needed at build time, not only at runtime.** `/` and `/how-it-works` are prerendered static and query Postgres during `next build`, so a build without it fails before a single request is served. It is the only variable the web app reads — `CONGRESS_API_KEY` and `FEC_API_KEY` belong to `scripts/` alone and are not in Vercel.
 
 ### How the routes behave in production
 
@@ -146,4 +148,4 @@ Next is deployment to Vercel. Milestone: Oct 1, 2026.
 ## Milestones
 
 - No vertical slice. Building a simplified version of the whole app from the start: search across multiple races (not one hardcoded race), the full issue-picking flow, side-by-side records — kept simple in styling and data volume, not in feature scope.
-- Oct 1, 2026: deployed on Vercel with a public URL.
+- Oct 1, 2026: deployed on Vercel with a public URL. **Met 17 Sep 2026** — <https://condorcet.fyi>.
