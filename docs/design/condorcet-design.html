@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condorcet: design reference (Highlighter)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  /* Tokens: see DESIGN.md */
+  :root { --bg: #FFFFFF; --text: #000000; --accent: #FFD60A; }
+  body { margin: 0; font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--text); }
+  a { color: #000; } a:hover { background: var(--accent); }
+  button, input { font-family: 'Archivo', 'Helvetica Neue', sans-serif; color: #000; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #000; outline-offset: 3px; }
+  .screen { display: none; }
+  .screen.active { display: block; }
+  .ref-nav { position: fixed; bottom: 16px; right: 16px; display: flex; gap: 6px; background: #000; padding: 6px; z-index: 10; font-family: 'Archivo', sans-serif; }
+  .ref-nav a { color: #fff; text-decoration: none; padding: 6px 10px; font-size: 13px; }
+  .ref-nav a:hover { background: var(--accent); color: #000; }
+</style>
+</head>
+<body>
+<!-- Design reference only. Rebuild these screens as Next.js + Tailwind components; do not copy this file into app/. -->
+<section class="screen" id="landing" aria-label="Landing: /">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px; display: flex; flex-direction: column; background: #ffffff;">
+  <header style="display: flex; justify-content: space-between; align-items: center;"><a href="#landing" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a><a href="#how" style="font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 600;">How it works</a></header>
+  <main style="flex-grow: 1; display: flex; flex-direction: column; gap: 28px; padding-top: 36px;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 56px; letter-spacing: -1.5px;">Find your <span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">2026 Senate race</span>.</h1>
+    <div style="display: flex; align-items: center; gap: 14px; height: 68px; box-sizing: border-box; padding: 0 8px 0 20px; border: 3px solid #000; width: 760px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="21" y2="21"></line></svg><label for="l5" style="position: absolute; left: -9999px;">Search by state</label><input id="l5" placeholder="Search by state" style="border: 0; outline: none; font-size: 24px; flex-grow: 1; background: transparent;"><a href="#issues" style="display: flex; align-items: center; text-decoration: none; height: 50px; padding: 0 24px; border: 0; background: #000; color: #fff; font-size: 17px; font-weight: 600;">Search</a></div>
+    <section style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 18px; font-weight: 600;">Or browse all 35 races</h2>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 32px;"><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Alabama</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Alaska</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Arkansas</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Colorado</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Delaware</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Florida</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Georgia</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Idaho</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Illinois</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Iowa</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Kansas</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Kentucky</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Louisiana</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Maine</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Massachusetts</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Michigan</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Minnesota</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Mississippi</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Montana</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Nebraska</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">New Hampshire</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">New Jersey</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">New Mexico</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">North Carolina</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Ohio</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Oklahoma</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Oregon</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Rhode Island</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">South Carolina</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">South Dakota</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Tennessee</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Texas</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Virginia</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">West Virginia</a><a href="#issues" style="font-family: 'Archivo', sans-serif; font-size: 17px; min-height: 40px; display: flex; align-items: center; text-decoration: none; border-bottom: 1px solid #000;">Wyoming</a></div>
+    </section>
+  </main>
+</div>
+</section>
+<section class="screen" id="issues" aria-label="Issue picker: /race/[slug]">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px; display: flex; flex-direction: column; background: #ffffff; ">
+  <header style="display: flex; justify-content: space-between; align-items: center;"><a href="#landing" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a><div style="font-family: 'Archivo', sans-serif; font-size: 15px; display: flex; gap: 12px; align-items: center;"><span style="font-weight: 600;">Michigan Senate 2026</span><a href="#landing">Change race</a></div></header>
+  <main style="display: flex; flex-direction: column; gap: 28px; padding-top: 40px; flex-grow: 1;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 52px; letter-spacing: -1.5px;">What <span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">matters to you</span>?</h1>
+    <div style="display: flex; align-items: center; gap: 14px; border-bottom: 3px solid #000; padding-bottom: 8px; width: 560px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="21" y2="21"></line></svg><label for="iss-a" style="position: absolute; left: -9999px;">Search issues</label><input id="iss-a" placeholder="Search issues, e.g. guns, student loans" style="border: 0; outline: none; font-size: 20px; flex-grow: 1; background: transparent;"></div>
+    <section style="display: flex; flex-direction: column; gap: 12px;"><h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 18px; font-weight: 600;">Popular</h2><div style="display: flex; flex-wrap: wrap; gap: 10px;"><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #FFD60A; font-size: 15px; font-weight: 600; border-radius: 22px;">Health</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #FFD60A; font-size: 15px; font-weight: 600; border-radius: 22px;">Taxation</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Immigration</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Economics and Public Finance</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Crime and Law Enforcement</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Energy</button></div></section>
+    <section style="display: flex; flex-direction: column; gap: 12px;"><h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 18px; font-weight: 600;">All issues</h2><div style="display: flex; flex-wrap: wrap; gap: 10px;"><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Agriculture and Food</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Armed Forces and National Security</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Civil Rights and Liberties, Minority Issues</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Education</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Environmental Protection</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Finance and Financial Sector</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Foreign Trade and International Finance</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Housing and Community Development</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">International Affairs</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Labor and Employment</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Social Welfare</button><button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; font-weight: 400; border-radius: 22px;">Transportation and Public Works</button></div></section>
+  </main>
+  <footer style="display: flex; justify-content: space-between; align-items: center; border-top: 3px solid #000; padding-top: 20px;">
+    <span style="font-family: 'Archivo', sans-serif; font-size: 17px;"><strong>2 of 5</strong> issues picked</span>
+    <a href="#results" style="display: flex; align-items: center; text-decoration: none; height: 56px; padding: 0 32px; background: #000; color: #fff; font-family: 'Archivo', sans-serif; font-size: 18px; font-weight: 600;">Show voting records</a>
+  </footer>
+</div>
+</section>
+<section class="screen" id="results" aria-label="Results: /race/[slug]?issues=...">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px; display: flex; flex-direction: column; gap: 36px; background: #ffffff;">
+  <header style="display: flex; justify-content: space-between; align-items: center; gap: 24px;">
+    <a href="#landing" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a>
+    <div style="display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #000; padding: 6px 0; width: 360px;">
+      <label for="race-a" style="font-family: 'Archivo', sans-serif; font-size: 14px;">Race</label>
+      <input id="race-a" value="Michigan Senate 2026" style="border: 0; outline: none; font-size: 16px; flex-grow: 1; background: transparent;">
+    </div>
+  </header>
+
+  <section style="display: flex; flex-direction: column; gap: 16px;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 56px; line-height: 1.05; letter-spacing: -1.5px;">
+      <span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">[Candidate A]</span> and <span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">[Candidate B]</span>, on the record.
+    </h1>
+    <p style="margin: 0; font-size: 19px; line-height: 1.5; max-width: 640px;">How each voted on the bills tied to the issues you picked. No scores, no recommendation.</p>
+  </section>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #FFD60A; font-size: 15px; font-weight: 600; border-radius: 22px;">Health</button>
+    <button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #FFD60A; font-size: 15px; font-weight: 600; border-radius: 22px;">Taxation</button>
+    <button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; border-radius: 22px;">Immigration</button>
+    <button style="height: 44px; padding: 0 18px; border: 2px solid #000; background: #fff; font-size: 15px; border-radius: 22px;">Energy</button>
+    <button style="height: 44px; padding: 0 18px; border: 2px dashed #000; background: #fff; font-size: 15px; border-radius: 22px;" onclick="location.hash='issues'">Add an issue</button>
+  </div>
+
+  <section style="display: flex; flex-direction: column; gap: 18px;">
+    <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 28px; font-weight: 800; border-bottom: 3px solid #000; padding-bottom: 8px;">Health</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 18px;">[Candidate A] (R)</div>
+        <article style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+            <a href="#" style="font-weight: 600; font-size: 17px;">[Bill number and short title]</a>
+            <span style="font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 4px 10px; background: #000; color: #fff;">Voted yea</span>
+          </div>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55;">[30-word plain-language summary of what the bill does, stored once at ingest.]</p>
+        </article>
+        <article style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+            <a href="#" style="font-weight: 600; font-size: 17px;">[Bill number and short title]</a>
+            <span style="font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 2px 8px; border: 2px solid #000;">Voted nay</span>
+          </div>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55;">[30-word plain-language summary of what the bill does, stored once at ingest.]</p>
+        </article>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 18px;">[Candidate B] (D)</div>
+        <div style="border: 2px solid #000; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 18px; font-weight: 600;">No federal voting record</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55;">[Candidate B] hasn't served in Congress, so there are no roll-call votes to show.</p>
+          <a href="#" style="font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 15px;">Read their platform on [campaign site]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</section>
+<section class="screen" id="how" aria-label="How it works: /how-it-works">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px 64px; display: flex; flex-direction: column; gap: 56px; background: #ffffff;">
+  <header style="display: flex; justify-content: space-between; align-items: center;"><a href="#landing" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a><a href="#landing" style="font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 600;">Find your race</a></header>
+  <section style="display: flex; flex-direction: column; gap: 20px;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 64px; letter-spacing: -2px;">How <span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">Condorcet</span> works</h1>
+    <p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px; font-size: 22px;">Three steps from your ballot to the voting record.</p>
+  </section>
+  <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;"><li style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 24px; padding: 28px 0; border-top: 3px solid #000;">
+        <span style="font-family: 'Archivo', sans-serif; font-size: 64px; font-weight: 800; line-height: 1;"><span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">1</span></span>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 26px; font-weight: 800;">Find your race</h3><p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px;">Search by state, or pick from the list of 2026 Senate races. Each race shows the two candidates on the general-election ballot.</p></div></li><li style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 24px; padding: 28px 0; border-top: 3px solid #000;">
+        <span style="font-family: 'Archivo', sans-serif; font-size: 64px; font-weight: 800; line-height: 1;"><span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">2</span></span>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 26px; font-weight: 800;">Pick up to five issues</h3><p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px;">Choose from the 32 policy areas Congress's own researchers use to label every bill, so an issue means the same thing for both candidates.</p></div></li><li style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 24px; padding: 28px 0; border-top: 3px solid #000;">
+        <span style="font-family: 'Archivo', sans-serif; font-size: 64px; font-weight: 800; line-height: 1;"><span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">3</span></span>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><h3 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 26px; font-weight: 800;">Compare the votes</h3><p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px;">For each issue, see up to five recent bills side by side: a short summary of what each bill does and how each candidate voted.</p></div></li></ol>
+  <section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;"><h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.5px;">Where the data comes from</h2>
+        <p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px;">Votes and bill records come from <a href="#">Congress.gov</a> and <a href="#">Senate.gov</a>. Each summary is shortened from the official Congressional Research Service summary, and every bill links to its source.</p></div>
+      <div style="display: flex; flex-direction: column; gap: 14px;"><h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.5px;">What the colors mean</h2><div style="display: flex; align-items: center; gap: 16px;"><span style="align-self: flex-start; font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 4px 10px; background: #000; color: #fff;">Voted yea</span><span style="font-size: 17px;">Voted for the bill.</span></div><div style="display: flex; align-items: center; gap: 16px;"><span style="align-self: flex-start; font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 2px 8px; border: 2px solid #000;">Voted nay</span><span style="font-size: 17px;">Voted against the bill.</span></div><div style="display: flex; align-items: center; gap: 16px;"><span style="align-self: flex-start; font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 2px 8px; border: 2px dashed #555; color: #444;">Not voting</span><span style="font-size: 17px;">Was absent or didn't vote.</span></div>
+        <p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px;">A vote for a bill isn't a stance on the issue. Read the summary to see what the bill does.</p></div>
+    </section>
+  <section style="border: 3px solid #000; padding: 36px; display: flex; flex-direction: column; gap: 14px;">
+      <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.5px;">What we don't do</h2>
+      <p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 640px; max-width: 900px;">We don't score candidates, recommend anyone, or guess where they stand. If a candidate has never served in Congress, we say so and link to their campaign site instead of leaving a blank column.</p>
+    </section>
+  <div style="display: flex; align-items: center; gap: 24px;"><a href="#landing" style="display: flex; align-items: center; height: 56px; padding: 0 30px; background: #000; color: #fff; font-family: 'Archivo', sans-serif; font-size: 18px; font-weight: 600; text-decoration: none;">Find your race</a></div>
+</div>
+</section>
+<nav class="ref-nav" aria-label="Design reference screens">
+  <a href="#landing">Landing</a><a href="#issues">Issues</a><a href="#results">Results</a><a href="#how">How it works</a>
+</nav>
+<script>
+  function show() {
+    var id = location.hash.slice(1) || 'landing';
+    document.querySelectorAll('.screen').forEach(function (s) { s.classList.toggle('active', s.id === id); });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+</script>
+</body>
+</html>

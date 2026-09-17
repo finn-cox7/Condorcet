@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condorcet: legal pages design reference</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root { --bg: #FFFFFF; --text: #000000; --accent: #FFD60A; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--text); }
+  a { color: #000; } a:hover { background: var(--accent); }
+  a:focus-visible { outline: 3px solid #000; outline-offset: 3px; }
+  section[id] { scroll-margin-top: 24px; }
+  .page { display: none; } .page.active { display: block; }
+  .ref-nav { position: fixed; bottom: 16px; right: 16px; display: flex; gap: 6px; background: #000; padding: 6px; z-index: 10; font-family: 'Archivo', sans-serif; }
+  .ref-nav a { color: #fff; text-decoration: none; padding: 6px 10px; font-size: 13px; }
+  .ref-nav a:hover { background: var(--accent); color: #000; }
+</style>
+</head>
+<body>
+<!-- Design reference only. Rebuild as app/terms/page.tsx and app/privacy/page.tsx with Tailwind. Legal text is placeholder. -->
+<div class="page" id="terms" aria-label="Terms: /terms">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px; display: flex; flex-direction: column; gap: 48px; background: #ffffff;">
+  <header style="display: flex; justify-content: space-between; align-items: center;"><a href="/" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a><nav style="display: flex; gap: 24px; font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 600;"><a href="/how-it-works">How it works</a><a href="/">Find your race</a></nav></header>
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 64px; letter-spacing: -2px;"><span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">Terms</span> and conditions</h1>
+    <p style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 16px;">Last updated [DATE]</p>
+  </div>
+  <main style="display: grid; grid-template-columns: 260px minmax(0, 720px); gap: 80px; flex-grow: 1; align-items: start;">
+    <nav aria-label="On this page" style="border-left: 2px solid #000;"><div style="font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 0 0 8px 12px;">On this page</div><ol style="list-style: none; margin: 0; padding: 0;"><li><a href="#terms-1" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; font-weight: 600; box-shadow: inset 4px 0 0 #FFD60A; padding-left: 12px;">1. Using Condorcet</a></li><li><a href="#terms-2" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">2. What the site is</a></li><li><a href="#terms-3" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">3. Accuracy of information</a></li><li><a href="#terms-4" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">4. Bill summaries</a></li><li><a href="#terms-5" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">5. Links to other sites</a></li><li><a href="#terms-6" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">6. Acceptable use</a></li><li><a href="#terms-7" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">7. Liability</a></li><li><a href="#terms-8" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">8. Changes and contact</a></li></ol></nav>
+    <article style="display: flex; flex-direction: column; gap: 28px;"><section id="terms-1" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">1. Using Condorcet</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Plain-language summary: who can use the site and that using it means accepting these terms.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-2" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">2. What the site is</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: a nonpartisan reference of public voting records, not an endorsement or voting advice.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-3" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">3. Accuracy of information</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: data comes from public government sources and may contain errors or delays; check the linked source.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-4" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">4. Bill summaries</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: summaries are shortened automatically from official ones and link to the full text.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-5" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">5. Links to other sites</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: campaign and government sites aren't run by us.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-6" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">6. Acceptable use</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: what isn't allowed, e.g. scraping at a load that disrupts the site.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-7" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">7. Liability</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: limits of responsibility.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="terms-8" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">8. Changes and contact</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: how updates are announced and how to reach you.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section></article>
+  </main>
+  <footer style="display: flex; justify-content: space-between; align-items: center; border-top: 3px solid #000; padding-top: 20px; font-family: 'Archivo', sans-serif; font-size: 15px;"><span>Condorcet. Built by [Finn Cox]. Not affiliated with any candidate or party.</span><nav style="display: flex; gap: 24px;"><a href="/how-it-works" style="font-weight: 400;">How it works</a><a href="#terms" style="font-weight: 800;" aria-current="page">Terms</a><a href="#privacy" style="font-weight: 400;">Privacy</a></nav></footer>
+</div>
+</div>
+<div class="page" id="privacy" aria-label="Privacy: /privacy">
+<div style="max-width: 1280px; min-height: 100vh; margin: 0 auto; box-sizing: border-box; padding: 48px 80px; display: flex; flex-direction: column; gap: 48px; background: #ffffff;">
+  <header style="display: flex; justify-content: space-between; align-items: center;"><a href="/" style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; text-decoration: none; letter-spacing: -0.5px;">Condorcet</a><nav style="display: flex; gap: 24px; font-family: 'Archivo', sans-serif; font-size: 15px; font-weight: 600;"><a href="/how-it-works">How it works</a><a href="/">Find your race</a></nav></header>
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 64px; letter-spacing: -2px;"><span style="background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">Privacy</span> policy</h1>
+    <p style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 16px;">Last updated [DATE]</p>
+  </div>
+  <main style="display: grid; grid-template-columns: 260px minmax(0, 720px); gap: 80px; flex-grow: 1; align-items: start;">
+    <nav aria-label="On this page" style="border-left: 2px solid #000;"><div style="font-family: 'Archivo', sans-serif; font-size: 13px; font-weight: 600; padding: 0 0 8px 12px;">On this page</div><ol style="list-style: none; margin: 0; padding: 0;"><li><a href="#privacy-1" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; font-weight: 600; box-shadow: inset 4px 0 0 #FFD60A; padding-left: 12px;">1. What we collect</a></li><li><a href="#privacy-2" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">2. Your searches and picks</a></li><li><a href="#privacy-3" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">3. Analytics and hosting</a></li><li><a href="#privacy-4" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">4. Cookies</a></li><li><a href="#privacy-5" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">5. Third parties</a></li><li><a href="#privacy-6" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">6. How long we keep it</a></li><li><a href="#privacy-7" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">7. Your choices</a></li><li><a href="#privacy-8" style="display: flex; align-items: center; min-height: 40px; font-family: 'Archivo', sans-serif; font-size: 15px; text-decoration: none; padding-left: 12px;">8. Changes and contact</a></li></ol></nav>
+    <article style="display: flex; flex-direction: column; gap: 28px;"><section id="privacy-1" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">1. What we collect</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: what the site actually stores. No accounts means no names, emails, or passwords.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-2" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">2. Your searches and picks</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: race and issues live in the page URL; say whether anything is logged.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-3" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">3. Analytics and hosting</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: what the host (Vercel) and any analytics record, such as IP address and pages visited.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-4" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">4. Cookies</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: which cookies are set, if any.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-5" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">5. Third parties</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: services that receive data, e.g. hosting, database, fonts.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-6" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">6. How long we keep it</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: retention period for any logs.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-7" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">7. Your choices</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: how to ask questions or request deletion.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section><section id="privacy-8" style="display: flex; flex-direction: column; gap: 10px; padding-top: 28px; border-top: 2px solid #000;">
+          <h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-size: 24px; font-weight: 800;">8. Changes and contact</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65;"><strong style="font-family: 'Archivo', sans-serif; font-size: 16px; background: linear-gradient(transparent 55%, #FFD60A 55%); padding: 0 4px;">In short:</strong> [Summary: how updates are announced and how to reach you.]</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #333;">[Full legal text for this section.]</p>
+        </section></article>
+  </main>
+  <footer style="display: flex; justify-content: space-between; align-items: center; border-top: 3px solid #000; padding-top: 20px; font-family: 'Archivo', sans-serif; font-size: 15px;"><span>Condorcet. Built by [Finn Cox]. Not affiliated with any candidate or party.</span><nav style="display: flex; gap: 24px;"><a href="/how-it-works" style="font-weight: 400;">How it works</a><a href="#terms" style="font-weight: 400;">Terms</a><a href="#privacy" style="font-weight: 800;" aria-current="page">Privacy</a></nav></footer>
+</div>
+</div>
+<nav class="ref-nav" aria-label="Design reference pages"><a href="#terms">Terms</a><a href="#privacy">Privacy</a></nav>
+<script>
+  function show() {
+    var h = location.hash.slice(1);
+    var page = h.indexOf('privacy') === 0 ? 'privacy' : 'terms';
+    document.querySelectorAll('.page').forEach(function (p) { p.classList.toggle('active', p.id === page); });
+    var el = h && h !== page ? document.getElementById(h) : null;
+    if (el) el.scrollIntoView(); else window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+</script>
+</body>
+</html>
