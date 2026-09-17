@@ -68,6 +68,8 @@ model Vote {
 model Race {
   id           String          @id @default(cuid())
   name         String
+  // URL form of name, e.g. "new-hampshire-senate-2026". Set by create-race.ts.
+  slug         String          @unique
   electionYear Int
   chamber      Chamber
   state        String

@@ -16,20 +16,10 @@
 
 import { prisma } from "../lib/prisma";
 import { Chamber } from "../app/generated/prisma/client";
+import { STATE_NAMES } from "../lib/states";
 
-export const STATE_NAMES: Record<string, string> = {
-  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
-  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
-  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
-  KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
-  MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri",
-  MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
-  NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
-  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
-  SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
-  VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
-  DC: "District of Columbia",
-};
+// Re-exported so existing callers (seed-senate-races.ts) keep their import.
+export { STATE_NAMES } from "../lib/states";
 
 export type RaceCandidateSpec = { fecCandidateId: string; party: string };
 
@@ -63,6 +53,12 @@ export async function createRace(
       ? `${stateName} Senate ${electionYear}`
       : `${stateName} District ${district} ${electionYear}`;
 
+  // URL form of the name, used as the /race/[slug] path segment.
+  const slug = name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
   // Prisma's compound-unique shorthand can't be used here: district is
   // nullable, and Postgres doesn't treat NULL as equal to NULL for
   // uniqueness lookups, so Prisma's generated type excludes null from it.
@@ -71,9 +67,9 @@ export async function createRace(
     where: { state: state.toUpperCase(), district, electionYear, chamber },
   });
   const race = existing
-    ? await prisma.race.update({ where: { id: existing.id }, data: { name } })
+    ? await prisma.race.update({ where: { id: existing.id }, data: { name, slug } })
     : await prisma.race.create({
-        data: { name, electionYear, chamber, state: state.toUpperCase(), district },
+        data: { name, slug, electionYear, chamber, state: state.toUpperCase(), district },
       });
 
   const stored: CreateRaceResult["stored"] = [];
