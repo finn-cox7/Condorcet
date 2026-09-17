@@ -113,15 +113,35 @@ Freshly scaffolded Next.js App Router project — no custom application code bey
 
 ## What's next
 
-Ingestion is done and verified: 118th and 119th Congresses, both chambers — 35 races, 73 candidates, 1,024 bills, 952 plain-language summaries, and every candidate column resolving to one of the four display states above (no empty columns).
+Ingestion and the web app are both done.
 
-Next is the web app, in build order:
+- **Ingestion:** 118th and 119th Congresses, both chambers — 35 races, 73 candidates, 1,024 bills, 952 plain-language summaries, and every candidate column resolving to one of the four display states above (no empty columns).
+- **Web app:** six routes — `/`, `/race/[slug]` (issue picker and comparison share the route, switched by `?issues=`), `/how-it-works`, `/terms`, `/privacy`.
 
-1. **Landing page search** over `Race.name` (e.g. "Delaware Senate 2026").
-2. **Issue picker** over the CRS policy areas in `Bill.policyArea` — 31 of the ~32 have bills with recorded votes.
-3. **Side-by-side candidate columns** per issue: max 5 issues, max 5 bills each, most recent first.
+Next is deployment to Vercel. Milestone: Oct 1, 2026.
 
-The app reads only from Postgres. It must never call Congress.gov, the FEC, or senate.gov during a request.
+### Required before the first deploy
+
+1. **Add `"postinstall": "prisma generate"` to `package.json`.** `app/generated/prisma` is gitignored, so a fresh clone has no Prisma client and `next build` fails on the missing import. This is the one step that breaks the build outright.
+2. **Set `DATABASE_URL` in Vercel's project settings, for every environment including Preview.** It is the only variable the web app reads. `CONGRESS_API_KEY` and `FEC_API_KEY` are used by `scripts/` alone and should not be added to Vercel.
+3. **`DATABASE_URL` must be present at build time, not only at runtime.** `/` and `/how-it-works` are prerendered static and query Postgres during `next build`, so a build without it fails before a single request is served.
+4. **Fill in `CONTACT` in `lib/legal.ts`.** It currently renders the literal `[add a contact email]` on `/terms` and `/privacy`.
+
+### How the routes behave in production
+
+- `/`, `/how-it-works`, `/terms`, `/privacy` — prerendered static. The first two read Postgres at build time; the legal pages read nothing.
+- `/race/[slug]` — server-rendered on demand, one Postgres read per request. The connection string is Neon's pooled host (`-pooler`), which is what serverless needs.
+- **Static means data changes need a redeploy.** A race added with `create-race.ts`, or a summary applied with `apply-plain-summaries.ts`, will not appear on the site until the next build. That is the right trade while races are hand-curated, but it is a deliberate one.
+
+### Keep out of the deployed app
+
+- **Never run `scripts/fetch-senate-votes.ts` from Vercel.** senate.gov sits behind an Akamai WAF that 403s cloud IPs. All ingestion stays local.
+- The app must never call Congress.gov, the FEC, or senate.gov during a request. It reads only from Postgres.
+
+### Known, not blocking
+
+- `npm run lint` reports 13 `@typescript-eslint/no-explicit-any` errors, all in `scripts/`. Next 16 does not run ESLint during `next build`, so they do not block a deploy — but they do hide new errors in `app/`.
+- No `engines` field in `package.json` and no `vercel.json`. Vercel's defaults are fine for both.
 
 ## Milestones
 
