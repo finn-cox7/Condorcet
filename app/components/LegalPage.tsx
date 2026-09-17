@@ -7,8 +7,6 @@ export type LegalSection = {
   /** Anchor id, e.g. "terms-1". */
   id: string;
   heading: string;
-  /** The plain-language line, shown after a bold "In short:". */
-  short: string;
   body: string;
 };
 
@@ -69,9 +67,6 @@ export function LegalPage({
               className="flex scroll-mt-6 flex-col gap-[10px] border-t-2 border-black pt-7"
             >
               <h2 className="font-sans text-2xl font-extrabold">{section.heading}</h2>
-              <p className="text-lg leading-[1.65]">
-                <strong className="font-sans text-base">In short:</strong> {section.short}
-              </p>
               <p className="text-lg leading-[1.65] text-[#333]">{section.body}</p>
             </section>
           ))}

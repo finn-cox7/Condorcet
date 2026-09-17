@@ -36,7 +36,7 @@ export default async function Home() {
 
       <main className="flex grow flex-col gap-7 pt-9">
         <h1 className="font-sans text-4xl font-extrabold tracking-[-1.5px] md:text-[56px]">
-          Find your 2026 Senate race.
+          Find your midterm election.
         </h1>
 
         <RaceSearch races={options} />
